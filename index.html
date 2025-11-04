@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-  <h1>MD ALIMUL ISLAM</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="qualifications.html">Qualifications</a>
-    <a href="experience.html">Experience</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<head>
+  <meta charset="UTF-8">
+  <title>MD ALIMUL ISLAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Shared header will be loaded here -->
+  <div id="header"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
 
   <main>
     <h2>About Me</h2>
@@ -24,10 +29,13 @@
     <p>
       Now, I'm channeling that experience into freelancing, focusing on creative and technical fields. I specialize in graphic design, web design, and Android app development, and I'm passionate about crafting visually engaging and user-friendly digital solutions.
     </p>
+
+    <p><a href="about.html">See more...</a></p>
   </main>
 
   <footer>
     <p>&copy; 2025 MD ALIMUL ISLAM</p>
   </footer>
+
 </body>
 </html>
