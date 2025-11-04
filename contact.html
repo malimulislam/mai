@@ -1,17 +1,49 @@
-<header>
-  <h1>MD ALIMUL ISLAM</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="qualifications.html">Qualifications</a>
-    <a href="experience.html">Experience</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - MD ALIMUL ISLAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<main>
-  <h2>Contact</h2>
-  <p><strong>Mailing Address:</strong> 143 (Kazi Aref Road), Kachubaria, Khoyarpur, Mirpur, Kushtia-7030, Bangladesh.</p>
-  <p><strong>Permanent Address:</strong> 143 (Kazi Aref Road), Kachubaria, Khoyarpur, Mirpur, Kushtia-7030, Bangladesh.</p>
-</main>
+  <!-- Shared header will be loaded here -->
+  <div id="header"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+  <main>
+    <h2>Contact</h2>
+
+    <p><strong>Mailing Address:</strong><br>
+    143 (Kazi Aref Road), Kachubaria, Khoyarpur, Mirpur, Kushtia-7030, Bangladesh.</p>
+
+    <p><strong>Permanent Address:</strong><br>
+    143 (Kazi Aref Road), Kachubaria, Khoyarpur, Mirpur, Kushtia-7030, Bangladesh.</p>
+
+    <h3>Send Me a Message</h3>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="subject">Subject:</label><br>
+      <input type="text" id="subject" name="subject"><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MD
