@@ -1,16 +1,43 @@
-<header>
-  <h1>MD ALIMUL ISLAM</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="qualifications.html">Qualifications</a>
-    <a href="experience.html">Experience</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - MD ALIMUL ISLAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<main>
-  <h2>About Me</h2>
-  <p>I graduated from IIUM in Fiqh & Usul al-Fiqh. I love blending creativity with tech through freelancing.</p>
-</main>
+  <!-- Shared header will be loaded here -->
+  <div id="header"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+  <main>
+    <h2>About Me</h2>
+    <p>I was born in the serene village of Kachubaria, nestled in the district of Kushtia, Bangladesh. My father is a dedicated farmer, and my mother is a graceful homemaker whose values shaped much of my early life. I grew up surrounded by loving family members, learning my first alphabets from them in a nurturing environment.</p>
+
+    <p>During my childhood, our village had only one primary school, where I received my foundational education. One of the most influential figures in this period was my maternal grandfather, who guided me with wisdom and care, becoming my very first and most cherished instructor.</p>
+
+    <p>After completing my primary education, I enrolled in a Madrasah (Islamic school) to pursue further studies. Over the years, I attended several Madrasahs, each contributing uniquely to my academic and spiritual growth. Among them, Sarsina Darussunnat Kamil Madrasah stands out as a particularly significant chapter in my journey.</p>
+
+    <p>I later completed my high school and O Level studies at Mirpur Najmul Ulum Siddiqia Fazil Madrasah, followed by A Level studies at Kuatul Islam Kamil Madrasah, further deepening my understanding of Islamic knowledge.</p>
+
+    <p>I graduated in 2023 from the International Islamic University Malaysia (IIUM) with a Bachelor's degree in Fiqh & Usul al-Fiqh (Islamic Jurisprudence & its origin). During my time at IIUM, I was actively involved with the ODRSDCE Media Team [Office of Deputy Rector (Student Development and Community Engagement)] and participated in various student societies. I previously served as a committee member of the Islamic Revealed Knowledge Students' Secretariat (ISRAK) and contributed to the Students' Representative Council (SRC 2018–19) under the Islamization department.</p>
+
+    <p>After completing my Bachelor's degree, I gained valuable experience working across various companies and industries, exploring diverse roles that enriched my skills and broadened my perspective. These professional journeys helped me understand the dynamics of different work environments and sharpened my adaptability.</p>
+
+    <p>Currently, I am focused on building a sustainable career through freelancing, where I can channel my creativity and technical expertise more independently. I specialize in graphic design, web design, and Android app development, and I take pride in delivering visually compelling and user-friendly digital solutions. My goal is to grow as a versatile freelancer, continuously learning and contributing to meaningful projects across the globe.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MD ALIMUL ISLAM</p>
+  </footer>
+
+</body>
+</html>
