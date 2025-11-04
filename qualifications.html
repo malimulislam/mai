@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qualifications - MD ALIMUL ISLAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Shared header will be loaded here -->
+    <div id="header"></div>
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <main>
+        <h2>Qualifications</h2>
+
+        <h3>Bachelor's Degree</h3>
+        <ul>
+            <li><strong>Subject:</strong> Islamic jurisprudence & its origin (Fiqh & Usul al-Fiqh)</li>
+            <li><strong>Institute:</strong> International Islamic University Malaysia (IIUM)</li>
+            <li><strong>Passing Year:</strong> 2023</li>
+        </ul>
+
+        <h3>A-Level</h3>
+        <ul>
+            <li><strong>Institute:</strong> Kuatul Islam Kamil Madrasah, Kushtia</li>
+            <li><strong>Board:</strong> Bangladesh Madrasah Education Board, Dhaka</li>
+            <li><strong>Passing Year:</strong> 2014</li>
+        </ul>
+
+        <h3>O-Level</h3>
+        <ul>
+            <li><strong>Institute:</strong> Mirpur Najmul Ul. Si. Fazil Madrasah</li>
+            <li><strong>Board:</strong> Bangladesh Madrasah Education Board, Dhaka</li>
+            <li><strong>Passing Year:</strong> 2012</li>
+        </ul>
+
+        <h3>Language Proficiency</h3>
+        <ul>
+            <li>Bengali (Native)</li>
+            <li>Arabic and English (Advanced level)</li>
+            <li>Urdu, Hindi, Malay, and Turkish (Primary level)</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MD ALIMUL ISLAM</p>
+    </footer>
+
+</body>
+</html>
