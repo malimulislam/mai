@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Experience - MD ALIMUL ISLAM</title>
+  <title>Gallary - MD ALIMUL ISLAM</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
+
+  <!-- Shared header will be loaded here -->
+  <div id="header"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
 
 <main>
   <h2>Gallery</h2>
@@ -15,5 +27,6 @@
   <footer>
     <p>&copy; 2025 MD ALIMUL ISLAM</p>
   </footer>
+
 
 
