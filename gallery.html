@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gallary - MD ALIMUL ISLAM</title>
+  <title>MD ALIMUL ISLAM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -11,10 +13,24 @@
   <div id="header"></div>
 
   <script>
+    // Load the header and then attach the toggle function
     fetch('header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
+
+        // Attach the toggle function after header is loaded
+        const icon = document.querySelector('#header .icon');
+        if (icon) {
+          icon.addEventListener('click', function () {
+            const nav = document.getElementById('myTopnav');
+            if (nav.className === 'topnav') {
+              nav.className += ' responsive';
+            } else {
+              nav.className = 'topnav';
+            }
+          });
+        }
       });
   </script>
 
@@ -27,6 +43,7 @@
   <footer>
     <p>&copy; 2025 MD ALIMUL ISLAM</p>
   </footer>
+
 
 
 
