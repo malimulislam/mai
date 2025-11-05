@@ -37,9 +37,145 @@
   <div class="page-wrapper">
 
 <main>
-  <h2>Gallery</h2>
-  <img src="images/design1.jpg" alt="Design 1">
-  <img src="images/app1.jpg" alt="App Screenshot">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f1f1f1;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center website */
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 50px;
+      word-break: break-word;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 28px;
+    }
+
+    .row {
+      margin: 8px -16px;
+    }
+
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+
+    /* Create four equal columns that float next to each other */
+    .column {
+      float: left;
+      width: 25%;
+    }
+
+    /* Clear floats after rows */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Content */
+    .content {
+      background-color: white;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive layout - two columns instead of four */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+    }
+
+    /* Responsive layout - stack columns */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MAIN (Center website) -->
+  <div class="main">
+    <h1>Travel History</h1>
+    <hr>
+
+    <!-- Portfolio Gallery Grid: Singapore -->
+    <h2>Singapore</h2>
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+          <p>Universal Studio</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+          <p>Maritime Experiential Museum</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Portfolio Gallery Grid: Malaysia -->
+    <h2>Malaysia</h2>
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+          <p>Rawang Waterfall, Selangor</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+          <p>Padang Kota Lama, Penang</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Portfolio Gallery Grid: Thailand -->
+    <h2>Thailand</h2>
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+          <p>Suvarnabhumi International Airport</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+          <p>Stamford International University</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
 </main>
      </div>
 
@@ -53,6 +189,7 @@
       document.getElementById('footer').innerHTML = data;
     });
 </script>
+
 
 
 
