@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>MD ALIMUL ISLAM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -11,10 +13,24 @@
   <div id="header"></div>
 
   <script>
+    // Load the header and then attach the toggle function
     fetch('header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
+
+        // Attach the toggle function after header is loaded
+        const icon = document.querySelector('#header .icon');
+        if (icon) {
+          icon.addEventListener('click', function () {
+            const nav = document.getElementById('myTopnav');
+            if (nav.className === 'topnav') {
+              nav.className += ' responsive';
+            } else {
+              nav.className = 'topnav';
+            }
+          });
+        }
       });
   </script>
 
@@ -32,23 +48,4 @@
 
     <p><a href="about.html">See more...</a></p>
 
-    <h2>Gallery</h2>
-    <p><a href="gallery.html">See more...</a></p>
-
-    <h2>Qualifications</h2>
-    <p><a href="qualifications.html">See more...</a></p>
-
-    <h2>Experience</h2>
-    <p><a href="experience.html">See more...</a></p>
-
-    <h2>Contact</h2>
-    <p><strong>Mailing Address:</strong> 143 (Kazi Aref Road), Kachubaria, Khoyarpur, Mirpur, Kushtia-7030, Bangladesh.</p>
-    <p><strong>Permanent Address:</strong> 143 (Kazi Aref Road), Kachubaria, Khoyarpur, Mirpur, Kushtia-7030, Bangladesh.</p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 MD ALIMUL ISLAM</p>
-  </footer>
-
-</body>
-</html>
+    <h2>Gallery
