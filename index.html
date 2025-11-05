@@ -50,18 +50,75 @@
 
     <p><a href="about.html">See more...</a></p>
 
-    <h2>Gallery</h2>
-    <p><a href="gallery.html">See more...</a></p>
 
-    <h2>Qualifications</h2>
-    <p><a href="qualifications.html">See more...</a></p>
 
-    <h2>Experience</h2>
-    <p><a href="experience.html">See more...</a></p>
+<head>
+  <meta charset="UTF-8">
+  <title>Icon Buttons</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
 
-    <h2>Contact</h2>
-    <p><strong>Mailing Address:</strong> 143 (Kazi Aref Road), Kachubaria, Khoyarpur, Mirpur, Kushtia-7030, Bangladesh.</p>
-    <p><strong>Permanent Address:</strong> 143 (Kazi Aref Road), Kachubaria, Khoyarpur, Mirpur, Kushtia-7030, Bangladesh.</p>
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .icon-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #04AA6D;
+      color: white;
+      border: none;
+      padding: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 8px;
+      width: 120px;
+      transition: background-color 0.3s ease;
+    }
+
+    .icon-button i {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .icon-button:hover {
+      background-color: #00210A;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="button-container">
+    <a href="qualifications.html" class="icon-button">
+      <i class="fas fa-bookmark"></i>
+      Qualifications
+    </a>
+    <a href=""experience.html" class="icon-button">
+      <i class="fas fa-briefcase"></i>
+      Experience
+    </a>
+    <a href="gallery.html" class="icon-button">
+      <i class="fas fa-camera"></i>
+      Gallery
+    </a>
+  </div>
+
+</body>
+
+
+     
   </main>
  </div>
   
@@ -75,6 +132,7 @@
       document.getElementById('footer').innerHTML = data;
     });
 </script>
+
 
 
 
