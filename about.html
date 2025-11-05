@@ -52,10 +52,19 @@
     <p>Currently, I am focused on building a sustainable career through freelancing, where I can channel my creativity and technical expertise more independently. I specialize in graphic design, web design, and Android app development, and I take pride in delivering visually compelling and user-friendly digital solutions. My goal is to grow as a versatile freelancer, continuously learning and contributing to meaningful projects across the globe.</p>
   </main>
 
-  <footer>
-    <p>&copy; 2025 MD ALIMUL ISLAM</p>
-  </footer>
+<!-- Shared footer will be loaded here -->
+<div id="footer"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+
 
 </body>
 </html>
+
 
