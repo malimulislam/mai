@@ -1,5 +1,163 @@
-.page-wrapper {
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 0 20px;
+@@ -48,97 +48,164 @@
+  margin-top: 2em;
+}
+
+/* Base header styles */
+header {
+  background-color: #004d99;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  position: relative;
+}
+
+/* Menu toggle icon */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+/* Navigation menu */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #0066cc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #004d99;
+    padding: 1em 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  nav a {
+    font-size: 0.9em;
+    padding: 6px 10px;
+  }
+
+  main h2 {
+    font-size: 1.2em;
+  }
+
+  main p {
+    font-size: 0.95em;
+  }
+}
+
+
+/* Menu toggle icon */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #0066cc;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #004d99;
+    padding: 1em;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
 }
