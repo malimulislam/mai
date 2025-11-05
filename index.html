@@ -5,70 +5,14 @@
   <title>MD ALIMUL ISLAM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-
-  <!-- Shared header will be loaded here -->
-  <div id="header"></div>
-
-  <script>
-    // Load the header and then attach the toggle function
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-
-        // Attach the toggle function after header is loaded
-        const icon = document.querySelector('#header .icon');
-        if (icon) {
-          icon.addEventListener('click', function () {
-            const nav = document.getElementById('myTopnav');
-            if (nav.className === 'topnav') {
-              nav.className += ' responsive';
-            } else {
-              nav.className = 'topnav';
-            }
-          });
-        }
-      });
-  </script>
-  
- <div class="page-wrapper">
-   
-   <main>
-    <h2>About Me</h2>
-    <p>
-      I recently completed my Bachelor's degree in Fiqh & Usul al-Fiqh from the International Islamic University Malaysia (IIUM), where I was actively involved in student development and media initiatives.
-    </p>
-    <p>
-      After graduation, I gained hands-on experience working with various companies across different sectors, which helped me develop a broad skill set and professional versatility.
-    </p>
-    <p>
-      Now, I'm channeling that experience into freelancing, focusing on creative and technical fields. I specialize in graphic design, web design, and Android app development, and I'm passionate about crafting visually engaging and user-friendly digital solutions.
-    </p>
-
-    <p><a href="about.html">See more...</a></p>
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <title>Icon Buttons</title>
+  <!-- Font Awesome 6 for modern icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: #f0f0f0;
-    }
-
     .button-container {
       display: flex;
+      justify-content: center;
       gap: 20px;
+      margin: 40px 0;
     }
 
     .icon-button {
@@ -100,40 +44,66 @@
 </head>
 <body>
 
-  <div class="button-container">
-    <a href="qualifications.html" class="icon-button">
-      <i class="fas fa-bookmark"></i>
-      Qualifications
-    </a>
-    <a href="experience.html" class="icon-button">
-      <i class="fas fa-briefcase"></i>
-      Experience
-    </a>
-    <a href="gallery.html" class="icon-button">
-      <i class="fas fa-camera"></i>
-      Gallery
-    </a>
+  <!-- Shared header will be loaded here -->
+  <div id="header"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+        const icon = document.querySelector('#header .icon');
+        if (icon) {
+          icon.addEventListener('click', function () {
+            const nav = document.getElementById('myTopnav');
+            nav.className = nav.className === 'topnav' ? 'topnav responsive' : 'topnav';
+          });
+        }
+      });
+  </script>
+
+  <div class="page-wrapper">
+    <main>
+      <h2>About Me</h2>
+      <p>
+        I recently completed my Bachelor's degree in Fiqh & Usul al-Fiqh from the International Islamic University Malaysia (IIUM), where I was actively involved in student development and media initiatives.
+      </p>
+      <p>
+        After graduation, I gained hands-on experience working with various companies across different sectors, which helped me develop a broad skill set and professional versatility.
+      </p>
+      <p>
+        Now, I'm channeling that experience into freelancing, focusing on creative and technical fields. I specialize in graphic design, web design, and Android app development, and I'm passionate about crafting visually engaging and user-friendly digital solutions.
+      </p>
+      <p><a href="about.html">See more...</a></p>
+
+      <!-- 🔘 Icon Buttons Section -->
+      <div class="button-container">
+        <a href="qualifications.html" class="icon-button">
+          <i class="fas fa-bookmark"></i>
+          Qualifications
+        </a>
+        <a href="experience.html" class="icon-button">
+          <i class="fas fa-briefcase"></i>
+          Experience
+        </a>
+        <a href="gallery.html" class="icon-button">
+          <i class="fas fa-camera"></i>
+          Gallery
+        </a>
+      </div>
+    </main>
   </div>
 
+  <!-- Shared footer will be loaded here -->
+  <div id="footer"></div>
+
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
 </body>
-
-
-     
-  </main>
- </div>
-  
-<!-- Shared footer will be loaded here -->
-<div id="footer"></div>
-
-<script>
-  fetch('footer.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-</script>
-
-
-
-
-
+</html>
