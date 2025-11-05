@@ -67,10 +67,19 @@
         </ul>
     </main>
 
-    <footer>
-        <p>&copy; 2025 MD ALIMUL ISLAM</p>
-    </footer>
+<!-- Shared footer will be loaded here -->
+<div id="footer"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+
 
 </body>
 </html>
+
 
